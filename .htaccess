@@ -1,0 +1,11 @@
+AddDefaultCharset utf-8
+
+RewriteEngine on
+RewriteBase /
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteRUle ^(.*)$ index.php
+
+php_value error_log logs/parse_error.log
